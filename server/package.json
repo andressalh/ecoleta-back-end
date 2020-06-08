@@ -7,7 +7,7 @@
     "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
     "knex:seed": "npx knex --knexfile knexfile.ts seed:run",
     "knex:migrate": "npx knex --knexfile knexfile.ts migrate:latest",
-    "start": "node src/server.ts"
+    "start": "ts-node src/server.ts"
   },
   "keywords": [],
   "author": "Andressa Henriques",
