@@ -8,7 +8,7 @@
     "knex:seed": "npx knex --knexfile knexfile.ts seed:run",
     "knex:migrate": "npx knex --knexfile knexfile.ts migrate:latest",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/server.ts"
+    "start": "node src/server.ts"
   },
   "keywords": [],
   "author": "Andressa Henriques",
