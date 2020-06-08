@@ -2,18 +2,15 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
     "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
     "knex:seed": "npx knex --knexfile knexfile.ts seed:run",
     "knex:migrate": "npx knex --knexfile knexfile.ts migrate:latest",
-
+    "start": "node src/server.ts"
   },
-  "keywords": [
-    "example",
-    "heroku"
-  ],
-  "author": "",
+
+  "author": "Andressa Henriques",
   "license": "ISC",
   "dependencies": {
     "@types/cors": "^2.8.6",
