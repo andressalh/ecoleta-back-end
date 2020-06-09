@@ -12,7 +12,7 @@
     "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies.",
     "build": "tsc -p .",
     "start": "node ./dist/src/server.js",
-    "heroku-postbuild": "npx knex --knexfile knexfile.js migrate:latest && npx knex --knexfile knexfile.js seed:run "
+    "heroku-postbuild": "npx knex --knexfile ./dist/src/knexfile.js migrate:latest && npx knex --knexfile ./dist/src/knexfile.js seed:run "
   },
   "keywords": [],
   "author": "",
