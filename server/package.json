@@ -9,6 +9,7 @@
     "knex:migrate": "npx knex --knexfile knexfile.ts migrate:latest",
     "start": "install && ts-node src/server.ts"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
