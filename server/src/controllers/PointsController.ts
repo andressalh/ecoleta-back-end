@@ -22,7 +22,7 @@ class PointsController{
         const serializedPoints = points.map((point) => {
           return {
             ...point,
-            image_url: `http://192.168.15.13:3333/uploads/${point.image}`,
+            image_url: `localhost/uploads/${point.image}`,
           };
         });
         if (!points) return response.status(400).json({error: "Point not found!"});   
@@ -37,7 +37,7 @@ class PointsController{
 
         const serializedPoint = {
             ...point,
-            image_url:`http://192.168.15.13:3333/uploads/${point.image}`,
+            image_url:`localhost/uploads/${point.image}`,
         };
 
         const items = await knex('items')

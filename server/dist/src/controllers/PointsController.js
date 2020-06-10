@@ -74,7 +74,7 @@ var PointsController = /** @class */ (function () {
                     case 1:
                         points = _b.sent();
                         serializedPoints = points.map(function (point) {
-                            return __assign(__assign({}, point), { image_url: "http://192.168.15.13:3333/uploads/" + point.image });
+                            return __assign(__assign({}, point), { image_url: "localhost/uploads/" + point.image });
                         });
                         if (!points)
                             return [2 /*return*/, response.status(400).json({ error: "Point not found!" })];
@@ -96,7 +96,7 @@ var PointsController = /** @class */ (function () {
                         if (!point) {
                             return [2 /*return*/, response.status(400).json({ message: 'Point not found.' })];
                         }
-                        serializedPoint = __assign(__assign({}, point), { image_url: "http://192.168.15.13:3333/uploads/" + point.image });
+                        serializedPoint = __assign(__assign({}, point), { image_url: "localhost/uploads/" + point.image });
                         return [4 /*yield*/, conection_1.default('items')
                                 .join('point_items', 'items.id', '=', 'point_items.item_id')
                                 .where('point_items.point_id', id)
