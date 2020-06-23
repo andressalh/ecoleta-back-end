@@ -8,11 +8,8 @@
     "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
     "knex:seed": "npx knex --knexfile knexfile.ts seed:run",
     "knex:migrate": "npx knex --knexfile knexfile.ts migrate:latest",
-    "heroku-prebuild": "echo This runs before Heroku installs dependencies.",
-    "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies.",
     "build": "tsc -p .",
     "start": "node ./dist/src/server.js",
-    "heroku-postbuild": "npx knex --knexfile knexfile.ts migrate:latest && npx knex --knexfile knexfile.ts seed:run "
   },
   "keywords": [],
   "author": "",
